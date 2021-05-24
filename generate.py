@@ -1,8 +1,8 @@
 import rsa
 from base64 import b64encode
 
-with open('privkey', mode='rb') as privatefile:
-    keydata = privatefile.read()
+with open('privkey', mode='rb') as privkey_file:
+    keydata = privkey_file.read()
 privkey = rsa.PrivateKey.load_pkcs1(keydata)
 
 data = 'user@email.com'
